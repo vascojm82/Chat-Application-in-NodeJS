@@ -11,7 +11,9 @@
 	'use script';
 	$(() =>{
 									//Handshake with server
-		let socket = io('<%= host %>' + '/chatter');		// '/chatter' is not a route but a socket namespace (pipeline)
+		let socket = io('<%= host %>' + '/chatter', {		// '/chatter' is not a route but a socket namespace (pipeline)
+			transports: ['websocket']
+		});
 		let roomID = '<%= roomID %>';
 		let user = '<%= user.fullName %>';
 		let userPic = '<%= user.profilePic %>';

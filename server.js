@@ -17,6 +17,14 @@ app.use(chatCat.session);   //Use the express-session instance returned by 'chat
 app.use(passport.initialize());   //Hooks passport the express's req & res streams
 
 app.use(passport.session());      //Hooks express's session middleware with passport
+app.use(require('morgan')('combined', {   //Http request logger
+  stream:{
+    write: (message) => {
+      //Write to logs
+      chatCat.logger.log('info', message);
+    }
+  }
+}));
 
 app.use('/', chatCat.router);   //Starting at '/', Use all routes in the router object that's returned
                                 //by 'chatCat.router'

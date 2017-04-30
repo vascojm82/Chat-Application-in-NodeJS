@@ -10,7 +10,9 @@
 		'use strict';
 		$(() => {
 										//Handshake with server
-			let socket = io('<%= host %>' + '/roomslist');		// '/roomslist' is not a route but a socket namespace (pipeline)
+			let socket = io('<%= host %>' + '/roomslist', { 	// '/roomslist' is not a route but a socket namespace (pipeline)
+				transports: ['websocket']
+			});
 			let newRoomInput = $("input[name='roomName']");
 
 			let renderChatRooms = (chatrooms) => {
