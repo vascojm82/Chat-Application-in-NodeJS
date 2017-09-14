@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>ChatCat - <%= room %></title>
+	<title>ChatApp - <%= room %></title>
 	<link rel="stylesheet" href="/css/chatroomStyles.css">
 	<script src="/js/jquery-2.1.4.min.js"></script>
 	<script src="/socket.io/socket.io.js"></script>			<!--- SocketIO creates these route internally & serves socket.io.js --->
@@ -111,7 +111,7 @@
 <body>
 	<div class="container">
 		<div class="titlePanel">
-			<h1>ChatCAT | <%= room %></h1>
+			<h1>ChatApp | <%= room %></h1>
 		</div>
 		<div class="controls">
 			<div class="userPicHolder"><img src="<%= user.profilePic %>" alt="<%= user.fullName %>"></div>

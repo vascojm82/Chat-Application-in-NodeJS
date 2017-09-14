@@ -1,2 +1,0 @@
-{"level":"error","message":"Mongoose connection error: MongoError: getaddrinfo ENOTFOUND ds141950.mlab.co ds141950.mlab.co:41950","timestamp":"2017-04-29T03:33:39.464Z"}
-{"level":"error","message":"Mongoose connection error: MongoError: getaddrinfo ENOTFOUND ds141950.mlab.co ds141950.mlab.co:41950","timestamp":"2017-04-29T03:35:36.670Z"}
